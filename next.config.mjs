@@ -5,7 +5,10 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-module.exports = nextConfig;
+module.exports = {
+    nextConfig,
+    distDir: 'out',
+}
 
 export default withSentryConfig(withSentryConfig(nextConfig, {
 // For all available options, see:
