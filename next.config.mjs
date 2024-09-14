@@ -1,8 +1,14 @@
+/**
+ * @type {import('next').NextConfig}
+ */
 import {withSentryConfig} from '@sentry/nextjs';
 const nextConfig = {
   output: "export",  // <=== enables static exports
   distDir: 'out',
   reactStrictMode: true,
+  images: {
+    unoptimized: true
+  },
 };
 
 module.exports =  nextConfig
