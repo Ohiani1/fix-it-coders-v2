@@ -7,7 +7,7 @@ const nextConfig = {
 
 module.exports = {
     nextConfig,
-    distDir: 'out',
+    output: 'export'
 }
 
 export default withSentryConfig(withSentryConfig(nextConfig, {
