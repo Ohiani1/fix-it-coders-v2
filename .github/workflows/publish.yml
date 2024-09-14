@@ -33,12 +33,6 @@ jobs:
         run: |
           npx next build
 
-      - name: Archive artifact
-        run: |
-          tar --dereference --hard-dereference -cvf "$RUNNER_TEMP/artifact.tar" --exclude=.git --exclude=.github -C "$INPUT_PATH" .
-        env:
-          INPUT_PATH: ./out
-
       - name: Print current working directory
         run: pwd
 
@@ -47,6 +41,12 @@ jobs:
 
       - name: List files in the out directory
         run: ls -la ./out
+
+      - name: Archive artifact
+        run: |
+          tar --dereference --hard-dereference -cvf "$RUNNER_TEMP/artifact.tar" --exclude=.git --exclude=.github -C "$INPUT_PATH" .
+        env:
+          INPUT_PATH: ./out
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
