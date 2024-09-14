@@ -5,22 +5,53 @@ const Grid = () => {
   return (
     <section id="about">
       <BentoGrid className="w-full py-20">
-        {gridItems.map((item, i) => (
-          <BentoGridItem
-            id={item.id}
-            key={i}
-            title={item.title}
-            description={item.description}
-            // remove icon prop
-            // remove original classname condition
-            className={item.className}
-            img={item.img}
-            imgClassName={item.imgClassName}
-            titleClassName={item.titleClassName}
-            spareImg={item.spareImg}
-          />
-        ))}
+        {gridItems.map((item, i) => {
+          if (item.id != 4 && item.id != 6) {
+            return (
+              <BentoGridItem
+                id={item.id}
+                key={i}
+                title={item.title}
+                description={item.description}
+                // remove icon prop
+                // remove original classname condition
+                className={item.className}
+                img={item.img}
+                imgClassName={item.imgClassName}
+                titleClassName={item.titleClassName}
+                spareImg={item.spareImg}
+              />
+            );
+          }
+        })}
       </BentoGrid>
+      <div className="flex justify-center gap-7">
+        <BentoGridItem
+          id={gridItems[3].id}
+          title={gridItems[3].title}
+          description={gridItems[3].description}
+          // remove icon prop
+          // remove original classname condition
+          className={gridItems[3].className}
+          img={gridItems[3].img}
+          imgClassName={gridItems[3].imgClassName}
+          titleClassName={gridItems[3].titleClassName}
+          spareImg={gridItems[3].spareImg}
+        />
+
+        <BentoGridItem
+          id={gridItems[4].id}
+          title={gridItems[4].title}
+          description={gridItems[4].description}
+          // remove icon prop
+          // remove original classname condition
+          className={gridItems[4].className}
+          img={gridItems[4].img}
+          imgClassName={gridItems[4].imgClassName}
+          titleClassName={gridItems[4].titleClassName}
+          spareImg={gridItems[4].spareImg}
+        />
+      </div>
     </section>
   );
 };

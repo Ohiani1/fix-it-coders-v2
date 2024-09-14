@@ -1,4 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -42,9 +43,12 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
-          </p>
+          <Image
+            src={"/logo.png"}
+            width={90}
+            height={90}
+            alt="fix-it-coders logo"
+          />
 
           {/**
            *  Link: https://ui.aceternity.com/components/text-generate-effect
@@ -57,12 +61,12 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+            Hi! we&apos;re fix-it-coders, web Developers based in Texas.
           </p>
 
           <a href="#about">
             <MagicButton
-              title="Show my work"
+              title="Show our work"
               icon={<FaLocationArrow />}
               position="right"
             />
