@@ -35,7 +35,7 @@ jobs:
           # No need for next export, export is configured in next.config.js
 
       - name: Upload artifact 📡
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./out # Ensure this matches the output directory configured in next.config.js
 
