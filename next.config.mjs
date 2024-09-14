@@ -1,5 +1,6 @@
 import {withSentryConfig} from '@sentry/nextjs';
 const nextConfig = {
+    basePath: "/fix-it-coders-v2",
   output: "export",  // <=== enables static exports
   reactStrictMode: true,
 };
