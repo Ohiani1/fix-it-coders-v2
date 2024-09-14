@@ -25,7 +25,7 @@ const Grid = () => {
           }
         })}
       </BentoGrid>
-      <div className="flex justify-center gap-7">
+      <div className="lg:flex lg:justify-center gap-7 grid">
         <BentoGridItem
           id={gridItems[3].id}
           title={gridItems[3].title}
