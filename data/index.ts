@@ -72,7 +72,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Product research tool",
+    title: "Competition Meter",
     des: "A product research tool that helps users gauge the demand for products",
     img: "/p1.svg",
     iconLists: [],
