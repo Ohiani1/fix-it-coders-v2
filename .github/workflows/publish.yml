@@ -33,21 +33,8 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npx next build
 
-      - name: Check if out directory exists
-        run: |
-          ls -la
-          echo "INPUT_PATH: $INPUT_PATH"
-
-      - name: Archive artifact
-        run: |
-          tar --dereference --hard-dereference -cvf "$RUNNER_TEMP/artifact.tar" --exclude=.git --exclude=.github -C "$INPUT_PATH" .
-        env:
-          INPUT_PATH: ./out
-
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
 
   deploy:
     environment:
