@@ -32,12 +32,12 @@ jobs:
       - name: Build with Next.js 🏗️
         run: |
           npx next build
-          npx next export
+          # No need for next export, export is configured in next.config.js
 
       - name: Upload artifact 📡
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./out # Ensure this matches the output directory of next export
+          path: ./out # Ensure this matches the output directory configured in next.config.js
 
   deploy:
     environment:
